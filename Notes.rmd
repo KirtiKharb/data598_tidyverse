@@ -3,6 +3,7 @@ title: "My Rmd Document"
 author: "Kirti Kharb"
 date: "`r format(Sys.time(),'%d %B, %Y')`"
 output: bookdown::html_document2
+bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -21,7 +22,7 @@ starwars %>%
   geom_point()
 ```
 
-We can see in Figure \@ref(fig:starwars-plot)
+We can see in Figure \@ref(fig:starwars-plot) the scatter plot of height and mass of human species.
 
 ```{r, starwars-tbl}
 starwars %>% 
@@ -33,7 +34,16 @@ starwars %>%
   knitr::kable(caption="A knit kable table of  starwars data")
 ```
 
-We can see in Table \@ref(tab:starwars-tbl)
+We can see in Table \@ref(tab:starwars-tbl) some data for human species.
 
+```{r, starwars-fig, fig.cap="My non-code yoda figure", echo=FALSE}
+knitr::include_graphics("figures/yoda.png")
+```
 
+We can see in Figure \@ref(fig:starwars-fig) the image of yoda in starwars.
 
+On a site note, these articles are fun to read [@wang2019survey; @zhang2019integrating].
+
+Xian et al. says about the good, the bad and the ugly [-@xian2017zero].
+
+## References cited
